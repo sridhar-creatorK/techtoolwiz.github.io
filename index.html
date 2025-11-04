@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Tool Wiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            animation: {
+              'text-gradient': 'text-gradient-animation 4s ease infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'spin-colors': 'spin 1.5s linear infinite, color-change 6s ease-in-out infinite',
+            },
+            keyframes: {
+              'text-gradient-animation': {
+                '0%, 100%': { 
+                  'background-size': '200% 200%',
+                  'background-position': 'left center' 
+                },
+                '50%': { 
+                  'background-size': '200% 200%',
+                  'background-position': 'right center' 
+                },
+              },
+              'float': {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-15px)' },
+              },
+              'spin': {
+                'to': { transform: 'rotate(360deg)' },
+              },
+              'color-change': {
+                '0%, 100%': { 'border-top-color': '#60A5FA' },
+                '25%': { 'border-top-color': '#4ADE80' },
+                '50%': { 'border-top-color': '#F472B6' },
+                '75%': { 'border-top-color': '#A78BFA' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
