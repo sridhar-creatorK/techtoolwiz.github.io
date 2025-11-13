@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sridhar-creatork.github.io/techtoolwiz.github.io/sitemap.xml
